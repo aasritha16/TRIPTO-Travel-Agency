@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="homepage.css">
+    <link href='https://fonts.googleapis.com/css?family=Slackey' rel='stylesheet'>
+</head>
+<body>
+	<nav>
+    <img class="logo" src ="logo.png">
+    <div class="tripto">
+         <a href ="/home_page.html/">TripTO</a>
+    </div>  
+    <button class="home"> 
+         <a href="/html/">Home</a>
+    </button>        
+    <button class="aboutus">
+         <a href="/css/">About Us</a>
+    </button>       
+    <button class="packages">
+        <a href="/js/">Packages</a>
+    </button>        
+    <button class="contactus">
+        <a href="/python/">Contact Us</a>
+    </button>       
+    <button class="login">
+        <img class="icon" src="prsnicon.png"> 
+    	<a href="/python/" class="account">ACCOUNT</a>
+    </button>
+	</nav>
+	<img src="background.png" class="background">
+	<div class="textonhome">
+	<h2>Unforgettable <br> Experiences Awaits</h2>
+	<p class="vizag">&nbspV&nbspI&nbspZ&nbspA&nbspG&nbsp</p>
+	<p style="font-size: 20px;">Tripto offers unparalleled travel services that <br>allow you to explore the vizag on your terms. With<br> customizable packages and expert planning, your<br> dream vacation is just a click away.</p><br><br>
+	<button style="font-family: roboto serif; font-size:22px">View Packages</button>
+	</div>
+	<h3 class="imgslide">Experience TripTO</h3>
+
+    <h3 class="imgslide">Explore Vishakapatnam through TripTO's eyes</h3>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="slide1.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="slide2.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="slide3.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="slide4.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="slide5.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="slide6.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="slide7.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="slide8.jpg" alt="Image 3"></div>
+    </div>
+
+    <div class="dot-container">
+        <div class="dot" onclick="currentSlide(0)"></div>
+        <div class="dot" onclick="currentSlide(1)"></div>
+        <div class="dot" onclick="currentSlide(2)"></div>
+        <div class="dot" onclick="currentSlide(3)"></div>
+        <div class="dot" onclick="currentSlide(4)"></div>
+        <div class="dot" onclick="currentSlide(5)"></div>
+        <div class="dot" onclick="currentSlide(6)"></div>
+        <div class="dot" onclick="currentSlide(7)"></div>
+    </div>
+</div>
+<h3 class="imgslide">Contact Us</h3>
+<div class="align">
+<p class="con">We'd love to hear from you!<p>
+<p style="margin-left: 50px; font-size:20px">Have a question about our services? Want to see<br> if your particular vacation is one we can help<br> with? We'd love to hear from you!<br><br></p>
+ <img class="wa" src="Whatsapp.jpg"> 
+<button class="message">
+        Message us on Whatsapp
+    </button></div>
+<img src="map.jpg" class="map">
+<h3 class="imgslide1">Social's</h3>
+<img src="insta.jpg" style="height: 120px; width: 120px; top: 2200px; left: 200px; position: absolute;">
+<img src="fb.jpg"style="height: 100px; width: 100px;top: 2200px; left: 450px; position: absolute;">
+<img src="wapp.jpg"style="height: 100px; width: 100px;top: 2200px; left: 700px; position: absolute;">
+<img src="mail.jpg"style="height: 100px; width: 100px;top: 2200px; left: 950px; position: absolute;">
+<img src="yt.jpg"style="height: 100px; width: 100px;top: 2200px; left: 1200px; position: absolute;">
+<footer class="footer">
+    
+    
+</footer>
+
+
+
+
+
+
+
+
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.slider');
+        const slideWidth = document.querySelector('.slide').offsetWidth;
+
+        if (index < 0) {
+            currentIndex = slider.childElementCount - 1;
+        } else if (index >= slider.childElementCount) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        const transformValue = -currentIndex * slideWidth + 'px';
+        slider.style.transform = 'translateX(' + transformValue + ')';
+
+         const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+    function currentSlide(index) {
+        showSlide(index);
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+    setInterval(nextSlide, 3000); 
+</script>
+</body>
+</html>

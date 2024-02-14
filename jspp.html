@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>aaa</title>
+</head>
+<body>
+	<p id="demo">edu youth meeet is on of the biggest event in south india where 25000+ sutudents attendentd the youth feast vowing for a drug free india.</p>
+	<script type="text/javascript">
+		let text = "Edu youth meeet is on of the biggest event in south india where 25000+ sutudents attendentd the youth feast vowing for a drug free india";
+		let pattern = /edu youth meeet/\b;
+		let result = text.match(pattern);
+		document.getElementById('demo').innerHTML = result
+	</script>
+
+</body>
+</html>

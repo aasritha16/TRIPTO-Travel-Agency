@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Validation signup</title>
+</head>
+<body>
+    <form onsubmit="signup(); return false;">
+        <label>Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label>Email</label>
+        <input type="email" name="email" id="mail"><br>
+        <label>PhoneNumber</label>
+        <input type="number" name="phno" id="phno"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script type="text/javascript">
+        function signup() {
+            var name = document.getElementById("name").value;
+            var mail = document.getElementById("mail").value;
+            var phno = document.getElementById("phno").value;
+
+            if (name == '') {
+                alert("Please enter name");
+            }
+            if (mail == '') {
+                alert("Please enter email");
+            }
+            if (phno == '') {
+                alert("Please enter number");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>toogle</title>
+</head>
+<body>
+	<form>
+		<label>Password</label>
+		<input type="password" name="PWD" id="pass"><br>
+		<input type="checkbox" onclick="myFunction()">Show Password
+		<script type="text/javascript">
+			function myFunction() {
+              var x = document.getElementById("pass");
+                if (x.type === "password") {
+                 x.type = "text";
+                 } else {
+                 x.type = "password";
+                 }
+            }
+		</script>
+</body>
+</html>
